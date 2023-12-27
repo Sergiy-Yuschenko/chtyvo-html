@@ -1,0 +1,225 @@
+/*---------------Загальні налаштування---------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    text-align: center;
+}
+
+
+p {
+    margin: 0;
+    font-size: clamp(14px, 3.3vw, 26px);
+    hyphens: auto;
+}
+ul,
+ol {
+    text-align: left;
+    font-size: clamp(14px, 3.3vw, 26px);
+}
+h1 {
+    font-size: clamp(32.2px, 7.5vw, 60px);
+    margin: 80px 0 80px;
+}
+h2 {
+    font-size: clamp(21px, 4.9vw, 39px);
+    margin: 50px 0 50px;
+}
+
+/* .book-content>h2 */
+h2:first-child {
+    margin: 0 0 50px;
+}
+
+h3 {
+    font-size: clamp(16.4px, 3.8vw, 30.4px);
+}
+h4 {
+    font-size: clamp(14px, 3.3vw, 26px);
+}
+
+h5 {
+    font-size: clamp(11.62px, 2.7vw, 21.6px);
+}
+
+h6 {
+    font-size: clamp(9.38px, 2.2vw, 17.4px);
+}
+/*
+ h1 - 60px    - 2,3 em   - 7.5 vw   - 32.2px
+h2 - 39px    - 1,5 em   - 4.9 vw   - 21px
+h3 - 30.4px - 1,17 em  - 3.8 vw   - 16.4px
+h4 - 26px    - 1em      - 3.3 vw   - 14px
+h5 - 21.6   - 0.83 em  - 2.7 vw   - 11.62
+h6 - 17.4   - 0.67em   - 2.2 vw   - 9.38
+
+p - 26 px    - 1 em     - 3.3 vw   - 46.2 */
+
+
+/*===========Загальні блоки і правила==========*/
+.container { /*Контейнер*/
+    max-width: 800px;
+    /* width: 800px; */
+    margin: 0 auto;
+    padding: 0 15px 30px;
+    /* background-color: #ffffff; */
+    background-color: #fefcfa;
+}
+.title-page {
+    padding-top: 30px;
+}
+
+.list-clean-style { /*Стиль списку без декорацій*/
+    list-style: none;
+}
+.img { /*Стиль рисунків*/
+    text-align: center;
+}
+
+.not-colored-link { /*Посилання не забарвлені синім але підкреслені*/
+    /*посилання змісту*/
+    /* text-decoration: none; */
+    color: #000000;
+}
+
+.implicit-link {/*Посилання не забарвлені синім і не підкреслене*/
+    text-decoration: none;
+    color: #000000;
+}
+.not-underlined-link {
+    text-decoration: none;
+}
+
+/* .not-colored-link:visited,
+.implicit-link:visited {
+     /*Посилання не забарвлені синім але підкреслені*/
+ /*   color: #000000;
+} */
+
+
+/*==================ОКРЕМІ БЛОКИ=================*/
+/*----------Блоки Header-------------*/
+.header {
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #ebebeb;
+}
+.book-nav {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.navigation-list {
+    display: flex;
+    padding: 0;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 300px) {
+    .navigation-list {
+        display: block;
+    }
+}
+
+.navigation-list-item {
+    /* border: 1px; */
+    display: block;
+    font-size: clamp(14px, 3.3vw, 26px);
+    text-align: center;
+    /* background-color: aqua; */
+}
+.navigation-list-item:not(:last-child) {
+    margin-right: 0.63vw;
+}
+.navigation-list-link {
+    padding: 3px 10px 5px;
+}
+.navigation-list-link:hover,
+.navigation-list-link:focus {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+/*-----------Блоки змісту---------*/
+.book-content-list {
+    /*Список ul змісту*/
+    padding-left: 5vw;
+}
+
+.book-content-list a:hover,
+.book-content-list a:focus {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+/*-----------Блоки головного тексту-----------*/
+.author { /*Стиль тексту для зазначення автора*/
+        font-size: 36px;
+        text-decoration: underline;
+        text-align: center;
+}
+
+/*--------------ОФОРМЛЕННЯ АБЗАЦІВ---------------*/
+
+.paragraph { /*абзац з вирівнюванням по всій ширині*/
+    text-align: justify;
+}
+
+.paragraph-center { /*абзац з вирівнюванням по центру*/
+   text-align: center;
+}
+
+.paragraph-right { /*абзац з вирівнюванням по правому боку*/
+    text-align: right;
+}
+
+.paragraph-first-indent { /*абзац з вирівнюванням по всій ширині з відступом першого рядка*/
+    text-align: justify;
+    text-indent: 8%;
+}
+
+.indent-by-half {/*відступ тексту на половину сторінки*/
+    padding-left: 50%;
+    text-align: justify;
+}
+
+.indent-left { /*відступ тексту зліва на 8% ширини сторінки*/
+    padding-left: 8%;
+}
+
+.indent-top { /*Відступ абзацу зверху*/
+    padding-top: 15px;
+}
+
+.indent-bottom { /*Відступ абзацу знизу*/
+    padding-bottom: 15px;
+}
+
+.indent-both { /*Відступи абзацу зверху і знизу*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+/*--------ОФОРМЛЕННЯ ТЕКСТУ--------*/
+ .capitalize {
+    text-transform: capitalize;
+ }
+ .uppercase {
+    text-transform: uppercase;
+ }
+
+
+
+/*Стилі притаманні конкретній книзі*/
+
+.indent-by-half { /*відступ тексту на половину сторінки*/
+    padding-left: 50%;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+
+

@@ -12,7 +12,7 @@ h6 {
 
 p {
     margin: 0;
-    font-size: clamp(14px, 3.3vw, 26px);
+    font-size: clamp(18px, 3.3vw, 26px);
     hyphens: auto;
 }
 ul,
@@ -38,15 +38,15 @@ h3 {
     font-size: clamp(16.4px, 3.8vw, 30.4px);
 }
 h4 {
-    font-size: clamp(14px, 3.3vw, 26px);
+    font-size: clamp(18px, 3.3vw, 26px);
 }
 
 h5 {
-    font-size: clamp(11.62px, 2.7vw, 21.6px);
+    font-size: clamp(14px, 2.7vw, 21.6px);
 }
 
 h6 {
-    font-size: clamp(9.38px, 2.2vw, 17.4px);
+    font-size: clamp(10px, 2.2vw, 17.4px);
 }
 /*
  h1 - 60px    - 2,3 em   - 7.5 vw   - 32.2px
@@ -102,12 +102,21 @@ p - 26 px    - 1 em     - 3.3 vw   - 46.2 */
 
 /*==================ОКРЕМІ БЛОКИ=================*/
 /*----------Блоки Header-------------*/
-.header {
+.header,
+.footer {
     display: flex;
     padding-top: 0;
     padding-bottom: 0;
     background-color: #ebebeb;
 }
+
+.footer {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    bottom: 0;
+}
+
 .book-nav {
     display: flex;
     align-items: center;

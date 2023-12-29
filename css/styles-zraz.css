@@ -1,4 +1,4 @@
-/*---------------Загальні налаштування---------------*/
+/*---------------Налаштування поводження html---------------*/
 h1,
 h2,
 h3,
@@ -48,16 +48,21 @@ h5 {
 h6 {
     font-size: clamp(10px, 2.2vw, 17.4px);
 }
-/*
- h1 - 60px    - 2,3 em   - 7.5 vw   - 32.2px
-h2 - 39px    - 1,5 em   - 4.9 vw   - 21px
-h3 - 30.4px - 1,17 em  - 3.8 vw   - 16.4px
-h4 - 26px    - 1em      - 3.3 vw   - 14px
-h5 - 21.6   - 0.83 em  - 2.7 vw   - 11.62
-h6 - 17.4   - 0.67em   - 2.2 vw   - 9.38
 
-p - 26 px    - 1 em     - 3.3 vw   - 46.2 */
+blockquote {
+    margin: clamp(5px, 3.3vw, 26px) clamp(8px, 5vw, 40px);
+    font-size: clamp(18px, 3.3vw, 26px);
+    hyphens: auto;
+}
 
+pre {
+    /* background-color: #f1f1f1; */
+    margin: clamp(5px, 1.9vw, 15px) clamp(8px, 5vw, 40px);
+    padding: clamp(6px, 2.3vw, 18px);
+    width: auto;
+    overflow: auto;
+    font-size: clamp(14px, 2.5vw, 20px);;
+}
 
 /*===========Загальні блоки і правила==========*/
 .container { /*Контейнер*/
@@ -80,8 +85,6 @@ p - 26 px    - 1 em     - 3.3 vw   - 46.2 */
 }
 
 .not-colored-link { /*Посилання не забарвлені синім але підкреслені*/
-    /*посилання змісту*/
-    /* text-decoration: none; */
     color: #000000;
 }
 
@@ -110,18 +113,12 @@ p - 26 px    - 1 em     - 3.3 vw   - 46.2 */
     background-color: #ebebeb;
 }
 
-.footer {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    bottom: 0;
-}
-
 .book-nav {
     display: flex;
     align-items: center;
     margin: 0 auto;
 }
+
 .navigation-list {
     display: flex;
     padding: 0;
@@ -129,20 +126,17 @@ p - 26 px    - 1 em     - 3.3 vw   - 46.2 */
 }
 
 @media screen and (max-width: 300px) {
-    .navigation-list {
+    header .navigation-list {
         display: block;
     }
 }
 
 .navigation-list-item {
-    /* border: 1px; */
-    display: block;
     font-size: clamp(14px, 3.3vw, 26px);
     text-align: center;
-    /* background-color: aqua; */
 }
 .navigation-list-item:not(:last-child) {
-    margin-right: 0.63vw;
+    margin-right: clamp(1px, 0.63vw, 5px);
 }
 .navigation-list-link {
     padding: 3px 10px 5px;
@@ -153,6 +147,32 @@ p - 26 px    - 1 em     - 3.3 vw   - 46.2 */
     background-color: #000000;
 }
 
+/*-------------Блок footer-----------*/
+.footer {
+    /* background-color: #000000; */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    bottom: 0;
+}
+
+.navigation-list-link-f {
+    padding: 3px;
+    background-color: #838383;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: clamp(14px, 2.5vw, 20px);
+    /* font-weight: bold; */
+}
+.navigation-list-link-f:hover,
+.navigation-list-link-f:focus {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.navigation-list-item-f:not(:last-child) {
+    margin-right: 20vw;
+}
 /*-----------Блоки змісту---------*/
 .book-content-list {
     /*Список ul змісту*/
@@ -192,8 +212,14 @@ p - 26 px    - 1 em     - 3.3 vw   - 46.2 */
 }
 
 .indent-by-half {/*відступ тексту на половину сторінки*/
-    padding-left: 50%;
+    padding-left: calc(100vw - 286px);
     text-align: justify;
+}
+
+@media screen and (min-width: 550px) {
+    .indent-by-half {
+        padding-left: 50%;
+    }
 }
 
 .indent-left { /*відступ тексту зліва на 8% ширини сторінки*/
@@ -222,13 +248,9 @@ p - 26 px    - 1 em     - 3.3 vw   - 46.2 */
 
 
 
-/*Стилі притаманні конкретній книзі*/
+/* Стилі притаманні конкретній книзі */
 
-.indent-by-half { /*відступ тексту на половину сторінки*/
-    padding-left: 50%;
-    padding-bottom: 30px;
-    text-align: left;
-}
+
 
 
 

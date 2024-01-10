@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*---------------Налаштування поводження html---------------*/
 /* body {
     background-color: #838383;
@@ -11,61 +12,133 @@ h6 {
     margin: 0;
     text-align: center;
 }
+        h1 {
+            font-size: 32.2px;
+            margin: 200px 0 2000px;
+        }
+        p {
+            margin: 0;
+            font-size: 18px;
+            hyphens: auto;
+        }
+    
+        ul,
+        ol {
+            text-align: left;
+            font-size: 14px;
+        }
+    
+
+    
+        h2 {
+            font-size: 21px;
+            margin: 50px 0 50px;
+        }
+    
+        /* .book-content>h2 */
+        h2:first-child {
+            margin: 0 0 50px;
+        }
+    
+        h3 {
+            font-size: 16.4px;
+        }
+    
+        h4 {
+            font-size: 18px;
+        }
+    
+        h5 {
+            font-size: 14px;
+        }
+    
+        h6 {
+            font-size: 10px;
+        }
+    
+        blockquote {
+            margin: 5px 8px;
+            font-size: 18px;
+            hyphens: auto;
+        }
+    
+        pre {
+            /* background-color: #f1f1f1; */
+            margin: 5px 8px;
+            padding: 6px;
+            width: auto;
+            overflow: auto;
+            font-size: 14px;
+        }
+@media screen and (min-width: 450px) {
+    p {
+        margin: 0;
+        font-size: clamp(18px, 3.3vw, 26px);
+        hyphens: auto;
+    }
+    ul,
+    ol {
+        text-align: left;
+        font-size: clamp(14px, 3.3vw, 26px);
+    }
+    h1 {
+        font-size: clamp(32.2px, 7.5vw, 60px);
+        margin: 80px 0 80px;
+    }
+    h2 {
+        font-size: clamp(21px, 4.9vw, 39px);
+        margin: 50px 0 50px;
+    }
+
+    /* .book-content>h2 */
+    h2:first-child {
+        margin: 0 0 50px;
+    }
+
+    h3 {
+        font-size: clamp(16.4px, 3.8vw, 30.4px);
+    }
+    h4 {
+        font-size: clamp(18px, 3.3vw, 26px);
+    }
+
+    h5 {
+        font-size: clamp(14px, 2.7vw, 21.6px);
+    }
+
+    h6 {
+        font-size: clamp(10px, 2.2vw, 17.4px);
+    }
+
+    blockquote {
+        margin: clamp(5px, 3.3vw, 26px) clamp(8px, 5vw, 40px);
+        font-size: clamp(18px, 3.3vw, 26px);
+        hyphens: auto;
+    }
+
+    pre {
+        /* background-color: #f1f1f1; */
+        margin: clamp(5px, 1.9vw, 15px) clamp(8px, 5vw, 40px);
+        padding: clamp(6px, 2.3vw, 18px);
+        width: auto;
+        overflow: auto;
+        font-size: clamp(14px, 2.5vw, 20px);;
+    }
+}
 
 
-p {
-    margin: 0;
-    font-size: clamp(18px, 3.3vw, 26px);
-    hyphens: auto;
-}
-ul,
-ol {
-    text-align: left;
-    font-size: clamp(14px, 3.3vw, 26px);
-}
-h1 {
-    font-size: clamp(32.2px, 7.5vw, 60px);
-    margin: 80px 0 80px;
-}
-h2 {
-    font-size: clamp(21px, 4.9vw, 39px);
-    margin: 50px 0 50px;
+
+
+/*--------Стилі змісту книги-------*/
+
+.book-content-link {
+    display: block;
+    height: 33px;
 }
 
-/* .book-content>h2 */
-h2:first-child {
-    margin: 0 0 50px;
-}
 
-h3 {
-    font-size: clamp(16.4px, 3.8vw, 30.4px);
-}
-h4 {
-    font-size: clamp(18px, 3.3vw, 26px);
-}
 
-h5 {
-    font-size: clamp(14px, 2.7vw, 21.6px);
-}
 
-h6 {
-    font-size: clamp(10px, 2.2vw, 17.4px);
-}
-
-blockquote {
-    margin: clamp(5px, 3.3vw, 26px) clamp(8px, 5vw, 40px);
-    font-size: clamp(18px, 3.3vw, 26px);
-    hyphens: auto;
-}
-
-pre {
-    /* background-color: #f1f1f1; */
-    margin: clamp(5px, 1.9vw, 15px) clamp(8px, 5vw, 40px);
-    padding: clamp(6px, 2.3vw, 18px);
-    width: auto;
-    overflow: auto;
-    font-size: clamp(14px, 2.5vw, 20px);;
-}
 
 /*===========Загальні блоки і правила==========*/
 .container { /*Контейнер*/
@@ -76,6 +149,10 @@ pre {
     /* background-color: #ffffff; */
     background-color: #fefcfa;
 }
+/* .title-page > .container {
+    height: 100vh;
+} */
+
 .title-page {
     padding-top: 30px;
 }
@@ -256,10 +333,12 @@ pre {
  }
 
 
-
-/* Стилі притаманні конкретній книзі */
-
-
+.italic { /*Похилий текст*/
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
 
 
 

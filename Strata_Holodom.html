@@ -5,7 +5,262 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Книга “Cтрата голодом”. Cемен Старів - Свідок голодомору в Україні (1932-1933рр.) розповідає про пережите</title>
         <meta name="description" content="Страта голодом - історія голодомору в Україні в 1932-1933 роках в селі Вергуни (Черкащина). Її розповідає свідок голодомору - Семен Старів (Мирон Долот), який пережив голодомор, та описує як  розвивалася катастрофа, що починалася як примусова колективізація, та переросла в нищівний голод.">
-        <link rel="stylesheet" href="./css/styles-zraz.css">
+        <!-- <link rel="stylesheet" href="./css/styles-zraz.css"> -->
+        <style>
+            @charset "UTF-8";
+body {
+    font-family: serif;
+}
+
+.red-border {
+    border: 2px solid red;
+    padding: 5px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+ 
+
+p {
+    margin: 0;
+    font-size: clamp(18px, 3.3vw, 26px);
+    hyphens: auto;
+}
+ul,
+ol {
+    text-align: left;
+    font-size: clamp(14px, 3.3vw, 26px);
+}
+h1 {
+    font-size: clamp(32.2px, 7.5vw, 60px);
+    margin: 80px 0 80px;
+}
+h2 {
+    font-size: clamp(21px, 4.9vw, 39px);
+}
+
+h3 {
+    font-size: clamp(16.4px, 3.8vw, 30.4px);
+}
+h4 {
+    font-size: clamp(18px, 3.3vw, 26px);
+}
+
+h5 {
+    font-size: clamp(14px, 2.7vw, 21.6px);
+}
+
+h6 {
+    font-size: clamp(10px, 2.2vw, 17.4px);
+}
+
+blockquote {
+    margin: clamp(5px, 3.3vw, 26px) clamp(8px, 5vw, 40px);
+    font-size: clamp(18px, 3.3vw, 26px);
+    hyphens: auto;
+}
+
+pre {
+    margin: clamp(5px, 1.9vw, 15px) clamp(8px, 5vw, 40px);
+    padding: clamp(6px, 2.3vw, 18px);
+    width: auto;
+    overflow: auto;
+    font-size: clamp(14px, 2.5vw, 20px);;
+}
+
+@media screen and (max-width: 450px) {
+    .book-content-link {
+        display: block;
+        min-height: 23px;
+        padding-top:5px;
+        padding-bottom: 5px;
+        margin-bottom: 2px;
+        border: 2px solid #000000;
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px 30px;
+    background-color: #fefcfa;
+}
+
+
+.title-page {
+    padding-top: 30px;
+}
+
+.list-clean-style {
+    list-style: none;
+}
+.img {
+    text-align: center;
+}
+
+.not-colored-link {
+    color: #000000;
+}
+
+.implicit-link {
+    text-decoration: none;
+    color: #000000;
+}
+.not-underlined-link {
+    text-decoration: none;
+}
+.header,
+.footer {
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #ebebeb;
+}
+.book-nav {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.navigation-list {
+    display: flex;
+    padding: 0;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 300px) {
+    header .navigation-list {
+        display: block;
+    }
+}
+.navigation-list-item {
+    font-size: clamp(14px, 3.3vw, 26px);
+    text-align: center;
+}
+.navigation-list-item:not(:last-child) {
+    margin-right: clamp(1px, 0.63vw, 5px);
+}
+.navigation-list-link {
+    padding: 3px 10px 5px;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+.navigation-list-link:hover,
+.navigation-list-link:focus {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.footer {
+    /* background-color: #000000; */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    bottom: 0;
+}
+.navigation-list-link-f {
+    padding: 3px 9px;
+    background-color: #000000;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: clamp(14px, 2.5vw, 20px);
+    vertical-align: middle;
+    border-radius: 10px;
+}
+.navigation-list-link-f:hover,
+.navigation-list-link-f:focus {
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    padding: 1px 7px;
+}
+.navigation-list-item-f:not(:last-child) {
+    margin-right: 20vw;
+}
+.book-content-list {
+    /*Список ul змісту*/
+    padding-left: 5vw;
+}
+.book-content-list a:hover,
+.book-content-list a:focus {
+    color: #ffffff;
+    background-color: #000000;
+}
+.author {
+        font-size: 36px;
+        text-decoration: underline;
+        text-align: center;
+}
+.alignment-justify {
+    text-align: justify;
+}
+
+.alignment-left {
+    text-align: left;
+}
+.alignment-center {
+   text-align: center;
+}
+
+.alignment-right {
+    text-align: right;
+}
+.indent-first {
+    text-indent: 8%;
+}
+.indent-by-half {
+    padding-left: calc(100vw - 286px);
+    text-align: justify;
+}
+@media screen and (min-width: 550px) {
+    .indent-by-half {
+        padding-left: 50%;
+    }
+}
+.indent-left {
+    padding-left: 8%;
+}
+
+.indent-top {
+    margin-top: 15px;
+}
+.indent-bottom {
+    margin-bottom: 15px;
+}
+.indent-both {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.indent-book-section-top {
+    margin-top: 50px;
+}
+.indent-book-section-bottom {
+    margin-bottom: 50px;
+}
+.indent-book-section-both {
+    
+    margin: 50px 0 50px;
+}
+ .capitalize {
+    text-transform: capitalize;
+ }
+ .uppercase {
+    text-transform: uppercase;
+ }
+.italic { 
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+.underline {
+    text-decoration:underline;
+}
+        </style>
     </head>
     <body>
         <header class="container header">
